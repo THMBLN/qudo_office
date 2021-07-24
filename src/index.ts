@@ -2,13 +2,7 @@
 
 let currentPopup: any = undefined;
 const today = new Date();
-const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-WA.onEnterZone('clock', () => {
-    currentPopup =  WA.openPopup("clockPopup","It's " + time,[]);
-})
-
-WA.onLeaveZone('clock', closePopUp)
+const time = today.getHours() + ":" + today.getMinutes();
 
 function closePopUp(){
     if (currentPopup !== undefined) {
